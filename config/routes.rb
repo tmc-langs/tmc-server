@@ -5,6 +5,7 @@ TmcServer::Application.routes.draw do
   delete '/signout', to: 'sessions#destroy'
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
+  get '/ipctest', to: 'ipc_test#index'
 
   resource :auth, only: [:show]
 
